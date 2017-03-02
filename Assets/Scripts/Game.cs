@@ -100,7 +100,7 @@ public class Game : MonoBehaviour {
 	private void BuildBackBtn() {
 		GUI.skin = MainSkin;
 
-		if (GUI.Button(new Rect(820, 610, 90, 45), "Back")) {
+		if (GUI.Button(new Rect(50, 610, 90, 45), "Back")) {
 			Application.LoadLevel("title");
 		}
 	}
