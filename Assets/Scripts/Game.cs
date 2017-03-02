@@ -24,7 +24,7 @@ public class Game : MonoBehaviour {
     void Start () {
 		if (!HasDumbAI) { 
 			GameObject aitext = GameObject.Find("AIText"); 
-			aitext.guiText.enabled = false;
+			aitext.GetComponent<GUIText>().enabled = false;
 		}
 		board = new Board(rows, cols);
 		board.Grid[3,4].CurrentState = Tile.State.Black;
@@ -100,7 +100,7 @@ public class Game : MonoBehaviour {
 	private void BuildBackBtn() {
 		GUI.skin = MainSkin;
 
-		if (GUI.Button(new Rect(690, 532, 90, 45), "Back")) {
+		if (GUI.Button(new Rect(820, 610, 90, 45), "Back")) {
 			Application.LoadLevel("title");
 		}
 	}
